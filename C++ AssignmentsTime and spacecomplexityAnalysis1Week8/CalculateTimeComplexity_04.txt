@@ -1,0 +1,19 @@
+Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = 1; i < n; i *= 2) {
+c++;
+}
+
+Answer
+
+Explanation:
+The loop starts with i = 1.
+In each iteration, i is multiplied by 2 (i *= 2), so i takes the values 1, 2, 4, 8, ..., and so on.
+The loop runs as long as i < n.
+
+On each iteration, i is doubled. This means the loop runs until i becomes greater than or equal to n.
+The value of i follows a sequence of powers of 2: 
+𝑖=2 0,2 1,2 2,…i=2 0,2 1,2 2,….The loop runs approximately until 2𝑘≥𝑛2 k ≥n, where 𝑘 is the number of iterations.Solving for k:The loop condition is 𝑖<𝑛 i<n, which means the loop runs until 𝑖 i reaches or exceeds 𝑛 n.After 𝑘 k iterations, 𝑖=2𝑘i=2k,and the loop terminates when 2𝑘≥𝑛2 k≥n.Taking the logarithm base 2 on both sides gives:𝑘=log2(𝑛)k=log2(n)
+
+Time Complexity:
+The loop runs approximately log2(𝑛)log 2(n) times, so the time complexity is O(log n).

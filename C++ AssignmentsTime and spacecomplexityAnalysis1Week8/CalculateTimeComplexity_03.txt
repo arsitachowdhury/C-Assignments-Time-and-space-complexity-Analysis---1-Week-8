@@ -1,0 +1,19 @@
+Calculate the time complexity for the following code snippet where k is some constant (k<<n).
+int c = 0;
+for(int i = 0; i < n; i += k) {
+c++;
+}
+
+Answer
+
+Explanation:
+The loop starts with i = 0 and increments i by k in each iteration (i += k).
+The loop continues until i becomes greater than or equal to n.
+The variable k is a constant, where k << n (meaning k is significantly smaller than n).
+
+The value of i increases by k in each iteration.
+To determine the number of iterations, we need to calculate how many times i can increase by k before reaching n. This happens approximately n / k times.
+
+Time Complexity:
+The number of iterations is approximately n / k. Since k is a constant, we can simplify this to O(n).
+The time complexity is O(n), as the constant k does not affect the overall asymptotic complexity.

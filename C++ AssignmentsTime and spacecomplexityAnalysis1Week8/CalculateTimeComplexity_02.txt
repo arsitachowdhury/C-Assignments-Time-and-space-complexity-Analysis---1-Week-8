@@ -1,0 +1,18 @@
+Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = n; i > 1; i /= i) {
+c++;
+}
+
+Answer
+
+Explanation:
+The loop starts with i = n.
+On each iteration, i is updated with i /= i. This means i is being divided by itself.
+Mathematically, i / i = 1, so after the first iteration, i becomes 1, and in the next iteration, the loop terminates because the condition i > 1 is no longer satisfied.
+
+Regardless of the initial value of n, i becomes 1 after the first iteration, and the loop terminates.
+Therefore, the loop executes only once.
+
+Time Complexity:
+Since the loop runs a constant number of times (just once), the time complexity is O(1).

@@ -1,0 +1,21 @@
+Calculate the time complexity for the following code snippet.
+
+int c = 0;
+for(int i = 0; i < n; i++) {
+for(int j = 0; j < i; j++){
+c++;
+}
+}
+
+Answer
+
+Explanation:
+The outer loop runs from i = 0 to i = n - 1, so it executes n times.
+The inner loop runs from j = 0 to j = i - 1 for each iteration of the outer loop, meaning it runs i times for each value of i.
+When i = 0, the inner loop runs 0 times.
+When i = 1, the inner loop runs 1 time.
+When i = 2, the inner loop runs 2 times.
+...
+When i = n - 1, the inner loop runs n - 1 times.
+
+Time Complexity:Since the total number of iterations grows quadratically with n, the time complexity of the code is O(n²).

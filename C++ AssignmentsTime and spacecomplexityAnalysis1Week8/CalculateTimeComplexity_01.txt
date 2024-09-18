@@ -1,0 +1,18 @@
+1. Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = n; i > 0; i /= 2) {
+c++;
+}
+
+Answer
+
+Explanation:
+The loop starts with i = n.
+On each iteration, the value of i is divided by 2 (i /= 2), so i takes the values n, n/2, n/4, ..., 1.
+The loop runs until i becomes 0, i.e., the condition i > 0 fails.
+
+In each iteration, i is halved, meaning the value of i decreases exponentially. Therefore, the number of iterations is the number of times n can be divided by 2 until it becomes 0.
+This is essentially the number of times you can divide n by 2, which is approximately log₂(n)
+
+Time Complexity:
+The loop runs for about log₂(n) iterations. Hence, the time complexity is O(log n).

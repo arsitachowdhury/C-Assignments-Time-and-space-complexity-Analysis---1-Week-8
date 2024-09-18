@@ -1,0 +1,19 @@
+Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = 0; i < n; i++) {
+c +=i;
+}
+
+Answer
+
+Explanation:
+The loop starts with i = 0 and increments i by 1 in each iteration.
+The loop continues until i becomes equal to n.
+During each iteration, c += i adds the value of i to c.
+
+The loop runs from i = 0 to i = n - 1, meaning the number of iterations is exactly n.
+Each iteration involves a constant-time operation (c += i), which takes O(1) time per iteration.
+
+Time Complexity:
+Since the loop runs n times and each iteration takes O(1) time, the overall time complexity is O(n).
+Thus, the time complexity of the code is O(n).
